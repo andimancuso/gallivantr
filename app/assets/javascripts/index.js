@@ -43,7 +43,6 @@ async function getVenues() {
     if (response.ok) {
       let jsonResponse = await response.json();
       let venues = jsonResponse.response.groups[0].items.map(spot => spot.venue);
-      console.log(venues);
       return venues;
     }
   } catch (error) {
