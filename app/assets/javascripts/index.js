@@ -68,16 +68,18 @@ async function getForecast() {
 
 // Render functions
 function renderVenues(venues) {
-  $venueDivs.forEach(($venue, index) => {
+  $venueDivs.forEach(($venue) => {
+    let randNum = Math.floor(Math.random() * 9);
     let venueContent =
-      '<h2>' + venues[index].name + '</h2>' +
+      '<h2>' + venues[randNum].name + '</h2>' +
       '<img class="venueimage" src="' + imgPrefix +
-      venues[index].photos.groups[0].items[0].suffix + '"/>' +
-      '<h3>Address:</h3>' +
-      '<p>' + venues[index].location.address + '</p>' +
-      '<p>' + venues[index].location.city + '</p>' +
-      '<p>' + venues[index].location.country + '</p>';
+      venues[randNum].photos.groups[0].items[0].suffix + '"/>' +
+      '<h3><br />Address:</h3>' +
+      '<p>' + venues[randNum].location.address + '</p>' +
+      '<p>' + venues[randNum].location.city + '</p>' +
+      '<p>' + venues[randNum].location.country + '</p>';
     $venue.append(venueContent);
+    venues.splice(randNum,1);
   });
   $destination.append('<h2>' + venues[0].location.city + '</h2>');
 }
@@ -85,8 +87,8 @@ function renderVenues(venues) {
 function renderForecast(days) {
   $weatherDivs.forEach(($day, index) => {
     let weatherContent =
-      '<h2> High: ' + days[index].day.maxtemp_f + '</h2>' +
-      '<h2> Low: ' + days[index].day.mintemp_f + '</h2>' +
+      '<h2> High: ' + days[index].day.maxtemp_f + '°F</h2>' +
+      '<h2> Low: ' + days[index].day.mintemp_f + '°F</h2>' +
       '<img src="http://' + days[index].hour[0].condition.icon +
       '" class="weathericon" />' +
       '<h2>' + weekDays[(new Date(days[index].date)).getDay()] + '</h2>';
