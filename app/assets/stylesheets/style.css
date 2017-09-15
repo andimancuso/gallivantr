@@ -110,6 +110,10 @@ footer {
   text-align: center;
 }
 
+.venue a {
+  color: #27b7c1;
+}
+
 .venueimg {
   width: 200px;
   height: 300px;

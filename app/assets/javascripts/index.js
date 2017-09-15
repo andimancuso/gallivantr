@@ -70,14 +70,19 @@ async function getForecast() {
 function renderVenues(venues) {
   $venueDivs.forEach(($venue) => {
     let randNum = Math.floor(Math.random() * 9);
+    let formattedAddress = venues[randNum].name + " " + venues[randNum].location.address + " " + venues[randNum].location.city;
+    let urlAddress = formattedAddress.replace(/ /g, "+");
     let venueContent =
       '<h2>' + venues[randNum].name + '</h2>' +
       '<img class="venueimage" src="' + imgPrefix +
       venues[randNum].photos.groups[0].items[0].suffix + '"/>' +
       '<h3><br />Address:</h3>' +
+          '<a href="https://google.com/maps/place/' + urlAddress + '" target="_blank">' +
       '<p>' + venues[randNum].location.address + '</p>' +
       '<p>' + venues[randNum].location.city + '</p>' +
-      '<p>' + venues[randNum].location.country + '</p>';
+      '<p>' + venues[randNum].location.country + '</p>' +
+          '</a>';
+
     $venue.append(venueContent);
     venues.splice(randNum,1);
   });
