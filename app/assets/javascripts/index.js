@@ -20,11 +20,23 @@ const $venueDivs = [$("#venue1"), $("#venue2"), $("#venue3"), $("#venue4")];
 const $weatherDivs = [$("#weather1"), $("#weather2"), $("#weather3"), $("#weather4")];
 const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
+// Date string
+const date = new Date();
+let year = date.getFullYear().toString();
+let month = (date.getMonth() + 1).toString();
+let day = date.getDate().toString();
+
+function leadingZero(timeDate) {
+  if (timeDate <= 9) { return timeDate = "0" + timeDate } else { return timeDate };
+};
+
+let todaysDate = year + leadingZero(month) + leadingZero(day);
+
 // AJAX functions
 async function getVenues() {
   const cityToLand = $input.val();
   const urlToFetch = url + cityToLand + '&venuePhotos=1&limit=10&client_id=' +
-    clientId + '&client_secret=' + clientSecret + '&v=20170305';
+    clientId + '&client_secret=' + clientSecret + '&v=' + todaysDate;
 
   try {
     let response = await fetch(urlToFetch);
