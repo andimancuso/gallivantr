@@ -1,3 +1,4 @@
 
 .DS_Store
-app/assets/images/pexels-photo-297642.jpeg
+assets/images/pexels*
+node_modules/*
