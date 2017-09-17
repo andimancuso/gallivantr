@@ -22401,13 +22401,22 @@ module.exports = ReactDOMInvalidARIAHook;
 
 
 class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-	render() {
-		return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-			'div',
-			null,
-			'Hello world!'
-		);
-	}
+  render() {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h1',
+        null,
+        'Hello world!'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h2',
+        null,
+        'Time to get this baby refactored into React!'
+      )
+    );
+  }
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = App;
 
@@ -22452,7 +22461,7 @@ exports = module.exports = __webpack_require__(187)(undefined);
 
 
 // module
-exports.push([module.i, "html {\n  background-color: blue;\n}\n", ""]);
+exports.push([module.i, "html {\n  background-color: grey;\n}\n\nmain {\n  margin: 0 auto 50px;\n  text-align: center;\n}\n\nh1 {\n  padding-top: 185px;\n  font-family: Montserrat;\n  font-size: 64px;\n  font-weight: 300;\n  letter-spacing: 1.1px;\n  text-align: center;\n  color: #ffffff;\n  margin: auto;\n  text-shadow: 4px 3px #27c19e;\n}\n\nh3 {\n  font-family: Work Sans;\n  font-weight: 500;\n  line-height: 1.29;\n  color: #27c19e;\n  padding-left: 5px\n}\n\np {\n  font-family: Work Sans;\n  font-size: 14px;\n  font-weight: 300;\n  line-height: 1.36;\n  text-align: left;\n  color: #4a4a4a;\n  padding-left: 5px;\n}\n\nimg {\n  margin-top: 20px;\n}\n\nform {\n  margin-top: 50px;\n  height: 100px;\n}\n\nfooter {\n  display: flex;\n  align-items: center;\n  height: 50px;\n}\n\n.weather h2 {\n  position: relative;\n  padding: 5px;\n}\n\n.container {\n  max-width: 900px;\n  margin: auto;\n  visibility: hidden;\n  display: none;\n  background-color: #ffffff;\n  opacity: 0.85;\n  padding: 50px 50px 20px 50px;\n}\n\n.weather h2 {\n  font-family: Montserrat;\n  font-size: 18px;\n  line-height: 0.78;\n  text-align: left;\n  color: #4a4a4a;\n}\n\n.weather {\n  width: 200px;\n  height: 300px;\n  background-color: #ffffff;\n  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);\n  padding: 10px 0;\n}\n\n.weather h2 {\n  text-align: center;\n}\n\n.weathericon {\n  width: 200px;\n  height: 200px;\n}\n\n.venue {\n  width: 275px;\n  height: 370px;\n  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);\n  text-align: center;\n  padding: 10px 5px;\n}\n\n.venue p {\n  text-align: center;\n}\n\n.venue a {\n  color: #27b7c1;\n}\n\n.venueimg {\n  width: 200px;\n  height: 300px;\n}\n\n#venues h2 {\n  font-family: Work Sans;\n  font-size: 22px;\n  font-weight: 600;\n  line-height: 1;\n  text-align: center;\n  padding-top: 5px;\n}\n\n#destination {\n  font-family: Montserrat;\n  font-size: 30px;\n  font-weight: 600;\n  letter-spacing: 0.9px;\n  text-align: left;\n  color: #27b7c1;\n}\n\n#destination h2 {\n  padding-bottom: 15px;\n}\n\n.sectiontitle {\n  height: 70px;\n  width: 300px;\n  align-items: center;\n}\n\n.sectiontitle h2 {\n  font-family: Montserrat;\n  font-size: 22px;\n  font-weight: 300;\n  letter-spacing: 3.4px;\n  text-align: left;\n  color: #4a4a4a;\n}\n\n#venues {\n  display: flex;\n  justify-content: space-around;\n  min-height: 370px;\n}\n\n#weather {\n  display: flex;\n  justify-content: space-around;\n  min-height: 350px;\n  margin-bottom: 20px;\n}\n\n#city {\n  width: 286px;\n  height: 46px;\n  border-radius: 4px;\n  border: solid 2.5px #ffffff;\n  background-color: #00c26d;\n  opacity: 0.73;\n  font-family: Source Sans Pro;\n  font-size: 18px;\n  line-height: 1;\n  letter-spacing: 0.4px;\n  text-align: left;\n  padding-left: 10px;\n  color: #ffffff;\n}\n\n::-webkit-input-placeholder { /* Chrome/Opera/Safari */\n  color: #efefef;\n}\n::-moz-placeholder { /* Firefox 19+ */\n  color: #efefef;\n}\n:-ms-input-placeholder { /* IE 10+ */\n  color: #efefef;\n}\n:-moz-placeholder { /* Firefox 18- */\n  color: #efefef;\n}\n\n#button {\n  width: 140px;\n  height: 46px;\n  border-radius: 2px;\n  background-color: #00c26d;\n  font-family: Source Sans Pro;\n  font-size: 18px;\n  font-weight: 600;\n  line-height: 0.94;\n  letter-spacing: 0.5px;\n  text-align: center;\n  color: #ffffff;\n}\n\n@media (max-width: 860px) {\n  main {\n    max-height: 500px;\n  }\n  #venues, #weather {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  }\n  .venue, .weather {\n    margin: 10px auto;\n    display: flex;\n    flex-direction: column;\n    width: 95%;\n    align-items: center;\n  }\n\n  .sectiontitle, .sectiontitle h2, #destination {\n    margin: auto;\n    text-align: center;\n  }\n}\n", ""]);
 
 // exports
 

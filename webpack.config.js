@@ -11,8 +11,8 @@ var config = {
   },
   module: {
     rules: [
-      { test: /\.(js)$/, exclude: /node_modules/, use: 'babel-loader' },
-      { test: /\.css$/,  exclude: /node_modules/, use: [ 'style-loader', 'css-loader' ]}
+      { test: /\.(js)$/, exclude: [ /node_modules/, /assets/ ], use: 'babel-loader' },
+      { test: /\.css$/,  exclude: [ /node_modules/, /assets/ ], use: [ 'style-loader', 'css-loader' ]}
     ]
   },
   devServer: {
