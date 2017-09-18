@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ExecuteSearch } from './CitySearch'
 
 
-export class ExecuteSearch extends React.Component {
+export class RenderSearch extends React.Component {
   render() {
     return (
       <div>
-        CitySearch.js
+          <div>RenderSearch.js</div>
+          <ExecuteSearch />
       </div>
     );
   };
-}
+};
 
 /*
-
-
 
 
 const $input = $('#city');
@@ -25,18 +25,18 @@ const $venueDivs = [$("#venue1"), $("#venue2"), $("#venue3"), $("#venue4")];
 const $weatherDivs = [$("#weather1"), $("#weather2"), $("#weather3"), $("#weather4")];
 const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-export function executeSearch() {
-  $venueDivs.forEach(venue => venue.empty());
-  $weatherDivs.forEach(day => day.empty());
-  $destination.empty();
-  $container.css("visibility", "visible");
-  $container.css("display", "block");
-  getVenues().then(venues => renderVenues(venues));
-  getForecast().then(forecast => renderForecast(forecast));
-  return false;
-}
-
-$submit.click(executeSearch)
-
+export function renderSearch() {
+  render() {
+    return (
+      <div>
+        <h1>lets go somewhere new</h1>
+        <form autocomplete="off">
+          <input type="text" id="city" placeholder="> What city would you like to see?">
+          <button id="button" type="submit">explore</button>
+        </form>
+      </div>
+    );
+  };
+};
 
 */
