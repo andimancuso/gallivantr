@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-export class ExecuteSearch extends React.Component {
+export class Search extends React.Component {
   render() {
     return (
       <div>
-        CitySearch.js
+        Search.js
       </div>
     );
   };
