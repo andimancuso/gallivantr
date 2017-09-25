@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
 export class Search extends React.Component {
   render() {
+    const location = this.props.location;
+
     return (
       <div>
-        Search.js
+        Search.js test: {this.props.location}
       </div>
     );
   };
@@ -23,7 +24,6 @@ const $destination = $('#destination');
 const $container = $('.container');
 const $venueDivs = [$("#venue1"), $("#venue2"), $("#venue3"), $("#venue4")];
 const $weatherDivs = [$("#weather1"), $("#weather2"), $("#weather3"), $("#weather4")];
-const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 export function executeSearch() {
   $venueDivs.forEach(venue => venue.empty());

@@ -5,8 +5,8 @@ export class RenderVenues extends React.Component {
   render() {
     return (
       <div>
-          <div>RenderVenues.js</div>
-          <GetVenues />
+          <div>RenderVenues.js test: {this.props.location}</div>
+          <GetVenues location={this.props.location} />
       </div>
     );
   };

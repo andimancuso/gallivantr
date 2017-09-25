@@ -6,7 +6,7 @@ export class GetVenues extends React.Component {
   render() {
     return (
       <div>
-        Venues.js
+        Venues.js test: {this.props.location}
       </div>
     );
   };

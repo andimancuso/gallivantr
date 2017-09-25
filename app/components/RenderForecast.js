@@ -5,8 +5,8 @@ export class RenderForecast extends React.Component {
   render() {
     return (
       <div>
-          <div>RenderForecast.js</div>
-          <GetForecast />
+          <div>RenderForecast.js test: {this.props.location}</div>
+          <GetForecast location={this.props.location} />
       </div>
     );
   };
